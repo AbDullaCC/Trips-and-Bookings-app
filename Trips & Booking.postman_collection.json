@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "b9865a9f-2459-4355-b045-08717794830e",
-		"name": "Trips & Booking",
+		"name": "Trips & Bookings",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "36525951"
 	},
@@ -94,179 +94,7 @@
 					},
 					"response": [
 						{
-							"name": "Admin login successfully",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "phone",
-											"value": "0968905201",
-											"type": "text"
-										},
-										{
-											"key": "password",
-											"value": "12345",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{host}}/api/user/login",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"api",
-										"user",
-										"login"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 05 Oct 2024 19:54:18 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 05 Oct 2024 19:54:18 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"user logged in successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 5,\n            \"name\": \"admin\",\n            \"phone\": \"0968905201\"\n        },\n        \"token\": \"1|nrQwPgayN6Gg8IfqFeMIpt9l4SvBwyoC74K0IB2y9019ada1\"\n    }\n}"
-						},
-						{
-							"name": "Invalid login attempt",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "phone",
-											"value": "0987654321",
-											"type": "text"
-										},
-										{
-											"key": "password",
-											"value": "12345",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{host}}/api/user/login",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"api",
-										"user",
-										"login"
-									]
-								}
-							},
-							"status": "Unauthorized",
-							"code": 401,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 05 Oct 2024 19:55:32 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 05 Oct 2024 19:55:32 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.1.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"invalid credentials\",\n    \"errors\": {\n        \"credentials\": \"incorrect phone or password\"\n    }\n}"
-						},
-						{
-							"name": "User login successfully",
+							"name": "User1 successful login",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -292,13 +120,13 @@
 									]
 								},
 								"url": {
-									"raw": "{{host}}/api/user/login",
+									"raw": "{{host}}/api/users/login",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"api",
-										"user",
+										"users",
 										"login"
 									]
 								}
@@ -313,11 +141,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 05 Oct 2024 19:56:43 GMT"
+									"value": "Mon, 14 Oct 2024 17:06:18 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 05 Oct 2024 19:56:43 GMT"
+									"value": "Mon, 14 Oct 2024 17:06:18 GMT"
 								},
 								{
 									"key": "Connection",
@@ -349,7 +177,93 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"message\": \"user logged in successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 8,\n            \"name\": \"user1\",\n            \"phone\": \"0987654321\"\n        },\n        \"token\": \"3|xn35gaAmEE3X4MJ3GyZqvjyUOhscAtFNUKmSky9dfdc6ff1a\"\n    }\n}"
+							"body": "{\n    \"message\": \"user logged in successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"user1\",\n            \"phone\": \"0987654321\"\n        },\n        \"token\": \"3|rssnLul22fDihfDRhLBXZNuhjmmr57Qt4qynBREJ409e5f07\"\n    }\n}"
+						},
+						{
+							"name": "Admin successful login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone",
+											"value": "0968905201",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/users/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Oct 2024 17:09:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Oct 2024 17:09:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user logged in successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"admin\",\n            \"phone\": \"0968905201\"\n        },\n        \"token\": \"5|yQtNgSznjfZSk1tIExqUO06mJcZwoutfJZoCbcDf85b211bf\"\n    }\n}"
 						}
 					]
 				}
